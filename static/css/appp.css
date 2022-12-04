@@ -1,0 +1,151 @@
+html, body, div, span, applet, object, iframe,
+ p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+a{
+    text-decoration: none;
+    color:#000000;
+}
+body{
+    background-color:#D8E3E7;
+    font-family:' Geneva', Tahoma, sans-serif;
+}
+body p{
+    color:rgb(99, 98, 98);
+}
+ul{
+    list-style:none;
+}
+/* header */
+nav{
+    background-color: #132C33;
+    /* background-color: #404258; */
+}
+.header_menu a{
+    text-decoration: none;
+    color:#fffafa;
+}
+.header_menu .inul a{
+    color:#000000;
+}
+.logo>a>img{
+    width:150px;
+    height: 60px;
+    border-radius: 10px;
+}
+.header_menu{
+    padding-top: 10px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.header_menu>ul {
+    
+    color:rgb(0, 0, 0);
+    display:flex;
+    gap:8rem;
+    list-style:none;
+}
+.titl{
+    color:#dfdbdb;
+    font-weight: bolder;
+    font-size: larger;
+    margin-right: 200px;
+    text-align: center;
+    align-items: center;
+}
+/* footer */
+.ontainer{
+    padding:0px 30px;
+}
+.flogo img{
+    width:100px;
+    height:50px;
+    margin-top: 10px;
+    border-radius: 10px;
+}
+.abc{
+    background-color: #132C33;
+}
+
+/* bodymain */
+.deptscont{
+    /* display: flex; */
+    align-items: flex-end;
+}
+.inside{
+
+    margin:50px;
+    background-color: #51C4D3;
+}
+.inside h5{
+    margin:5px;
+    font-style:italic;
+    font-size: 2em;
+    text-align: center;
+    
+}
+.depts{
+    border-radius: 10px;
+    margin-top:10px;
+    width:310px;
+    height:180px;
+}
+.abtp{
+    margin:40px 0px;
+    padding:100px;
+    padding-top: 50px;
+    padding-bottom: 70px;
+    background-color: #7fbdd7;
+}
+.abtp h1{
+    font-size: 55px;
+    font-weight: 400;
+    font-style: italic;
+    
+}
+.abtp p{
+    font-size: 18px;
+    margin-right:100px;
+    text-align: center;
+    line-height: 26px;
+    /* width:100%; */
+}
+
+.abtp .image-side img{
+    width:100%;
+    height:100%;
+}
+.abtp .text-side-right p{
+    margin-top: 80px;
+}
+.abtp .text-side p{
+    font-size: 28px;
+    letter-spacing: 1px;
+    word-spacing: 2px;
+    line-height: normal;
+}
+.abtp .form-right{
+    margin-top: 50px;
+    margin-left: 500px;
+   border:1px solid grey;
+   border-radius: 10px;
+   padding:10px;
+   
+}

@@ -1,0 +1,66 @@
+
+{% extends 'main.html'%}
+{% load static %}
+{% block content %}
+    <div class="container">
+        <div class="box-formm">
+            <div class="leftt">
+                <div class="overlay">
+                    <img src="{% static 'images/loginpic.jpg' %}">
+                </div>
+            </div>
+            <div class="right">
+                <h5>{{type}} Login</h5>
+                <p>Don't have an account? <a href="#">Create Your Account</a> it takes less than a minute</p>
+                <form actio="">
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="text" class="form-control form-control-lg" id="email" placeholder="abc@xyz.com">
+                    </div>
+                    <br>
+                    {% if type == 'Student' %}
+                        <div class="form-group">
+                            <label for="Rollno">Roll-No.</label>
+                            <input type="text" class="form-control form-control-lg" id="Rollno" placeholder="Rollno">
+                        </div>
+                    {% elif type == 'Teacher' %}
+                        <div class="form-group">
+                            <label for="Tr.No.">Faculity number</label>
+                            <input type="text" class="form-control form-control-lg" id="Tr.No." placeholder="Faculity number">
+                        </div>
+                    {% else %}
+                    {% endif %}
+                    <br>
+                    {% if type == 'Student' %}
+                    <div class="form-group">
+                        <label for="PR">PR.Number</label>
+                        <input type="number" class="form-control form-control-lg" id="PR" placeholder="PR No." >
+                    </div>
+                    <br>
+                    {% else %}
+
+                    {% endif %}
+                    
+                    <div class="form-group">
+                        <label for="password">Password</label>
+                        <input type="password" class="form-control form-control-lg" id="password" placeholder="Password">
+                    </div>
+                    <br>
+                    <div class="remember-me--forget-password">
+                        <label>
+                            <input type="checkbox" name="item" >
+                            <span class="text-checkbox">Remember me</span>
+                        </label>
+                        <p>forget password?</p>
+                    </div>
+                    <br>
+                    <div class="form-group abcd">
+                        <input type="submit" class="form-control" id="email" placeholder="Login">
+                    </div>
+                </form>
+            </div>
+            
+        </div>
+    </div>
+{% endblock content %}
+

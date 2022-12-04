@@ -1,0 +1,38 @@
+{% load static %}
+<nav class="navbar sticky-top">
+    <div class="container">
+        <div class="logo">
+            <a href="/"><img src= "/images/picc_dr.png" alt="symbol"></a>
+        </div>
+        <div class="titl">
+            <h4>SVS College of Engineering</h4>
+        </div>
+        <div class="header_menu">
+            <ul>
+                <li>
+                    <div class="btn btn-secondary">
+                        <a href="/">HOME</a>
+                    </div>
+                </li>
+                <li>
+                    <div class="dropdown">
+                        <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            ACADEMICS
+                        </button>
+                        <ul class="dropdown-menu inul" aria-labelledby="dropdownMenuButton1">
+                            <li><a class="dropdown-item" href="/login/{{'Student'}}">Student</a></li>
+                            <li><a class="dropdown-item" href="/login/{{'Teacher'}}">Teacher</a></li>
+                            <li><a class="dropdown-item" href="/login/{{'Visitor'}}">Visitor</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    <div class="btn btn-secondary">
+                        <a href="/">ADMISSION</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+

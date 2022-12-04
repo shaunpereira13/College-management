@@ -1,0 +1,129 @@
+
+body{
+  background-color:#D8E3E7;
+  font-family:' Geneva', Tahoma, sans-serif;
+  color:#2884c6;
+  font-size: larger;
+  
+}
+.box-formm {
+  margin:100px 0px;
+  width: 100%;
+  height:800px;
+  background: #FFFFFF;
+  border-radius: 10px;
+  overflow: hidden;
+  display: flex;
+  flex: 1 1 100%;
+  align-items: stretch;
+  box-shadow: 0 0 20px 6px #126E82;
+}
+.box-formm div {
+  height: auto;
+}
+.box-formm .leftt {
+  color: #c23939;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 40%;
+  overflow: hidden;
+}
+.box-formm .leftt .overlay {
+  padding: 10px;
+  height: 100%;
+  background: #51C4D3;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+.box-formm .leftt .overlay img{
+  width:100%;
+  align-items: center;
+  height:90%;
+  margin-top: 30px;
+  border-radius: 10px;
+}
+/* rigth */
+.box-formm .right {
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+.box-formm .right h5 {
+  font-size: 100px;
+  
+}
+.box-formm .right p {
+  font-size: 20px;
+  color: rgb(99, 98, 98);
+}
+
+
+.box-formm .right .remember-me--forget-password {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.box-formm .right .remember-me--forget-password input {
+  margin: 0;
+  margin-right: 7px;
+  width: auto;
+}
+
+
+
+label::before {
+  position: absolute;
+  font-family: FontAwesome;
+  background: transparent;
+  border: 3px solid #70F570;
+  border-radius: 4px;
+  color: transparent;
+  left: -30px;
+  transition: all 0.2s linear;
+}
+
+
+
+label span.text-checkbox {
+  display: inline-block;
+  height: auto;
+  position: relative;
+  cursor: pointer;
+  transition: all 0.2s linear;
+}
+
+.box-formm .right .abcd input{
+  color: #fff;
+  font-size: 25px;
+  padding: 12px 35px;
+  border-radius: 50px;
+  display: inline-block;
+  border: 0;
+  outline: 0;
+  background-image: linear-gradient(135deg, #6ad4ee 10%, #2884c6 100%);
+}
+
+.box-formm .right .remember-me--forget-password p:hover{
+  color:#000000;
+}
+
+@media (max-width: 980px) {
+  body{
+    font-size: larger;
+  }
+  .box-formm .right {
+    width: 100%;
+  }
+  .box-formm .leftt {
+    width: 100%;
+  }
+  .box-formm {
+    flex-flow: wrap;
+    text-align: center;
+    align-content:center;
+    height:100%;
+    align-items: center;
+    margin:auto;
+  }
+}

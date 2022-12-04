@@ -1,0 +1,81 @@
+{% extends 'main.html' %}
+{% load static %}
+{% block content %}
+    <div class="row abtp ">
+        <h1>Why choose SVS?</h1>
+        <br>
+        <div class="col-4  image-side">
+            <img src="{% static 'images/pcce.jpg' %}">
+        </div>
+        
+        <div class="col-8">
+            <div class="col-12 text-side text-side-right">
+                <p>Since 2004, SVS has guided over 30,000 students to Conquer their dreams. Having a visa success rate, 
+                    north of 99 goes to show that they are experts at what they do. With a lot of information available 
+                    online today – you need someone with the real-world experience of having sent students to the UK or 
+                    Ireland, to validate your choices and guide you in the best direction.
+                </p>
+            </div>
+            <br><br>
+            <div class="col-5 text-side form-right">
+                <h3>Get in Touch</h3>
+                <form actio="">
+                    <div class="form-group">
+                        <input type="text" class="form-control form-control-lg" id="name" placeholder="Name">
+                    </div>
+                    <br>
+                    <div class="form-group">
+                        <input type="email" class="form-control form-control-lg" id="email" placeholder="Email">
+                    </div>
+                    <br>
+                    <div class="form-group">
+                        <input type="number" class="form-control form-control-lg" id="mobile" placeholder="Phone-Number">
+                    </div>
+
+                    <br>
+                    <div class="form-group">
+                        <input type="text" class="form-control form-control-lg" id="qu" placeholder="Queries">
+                    </div>
+                    <br>
+                    <div class="form-group abcd">
+                        <input type="submit" class="form-control" id="email" placeholder="Login">
+                    </div>
+                </form>
+            </div>
+            
+        </div>
+    </div>
+
+    <div class="abtp">
+        <h1>About</h1>
+        <div class="text-side">
+            <p>
+                SVS Engineering College strives to offer affordable and high quality education in a friendly environment. <br>We believe in Power of Knowledge and Individual can get Supreme Power through his/her acquired knowledge. Simply <br>in few words “Knowledge is Power Supreme”.
+                <br>SVS Engineering College (HIC) is a Vocational Education and Training (VET) College based in Melbourne. <br>Its campus is conveniently located near Melbourne CBD, with easy access to public transport.
+            </p>
+        </div>
+    </div>
+
+    <div class="deptscont">
+        <div class="row inside">
+            <span>
+                <h5>Departments</h5>
+            </span>
+            <div class="col-3">
+                <img class="depts" src="images/COMP.png">
+            </div>
+            <div class="col-3">
+                <img class="depts" src="images/ECOMP.png">
+                <p></p>
+            </div>
+            <div class="col-3">
+                <img  class="depts"src="images/IT.png">
+                <p></p>
+            </div>
+            <div class="col-3">
+                <img class="depts" src="images/MECH.png">
+                <p></p>
+            </div>
+        </div>
+    </div>
+{% endblock content %}
