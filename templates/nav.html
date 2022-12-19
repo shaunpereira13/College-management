@@ -21,16 +21,25 @@
                         </button>
                         <ul class="dropdown-menu inul" aria-labelledby="dropdownMenuButton1">
                             <li><a class="dropdown-item" href="/login/{{'Student'}}">Student</a></li>
-                            <li><a class="dropdown-item" href="/login/{{'Teacher'}}">Teacher</a></li>
+                            <li><a class="dropdown-item" href="/loginteach">Teacher</a></li>
                             <li><a class="dropdown-item" href="/login/{{'Visitor'}}">Visitor</a></li>
                         </ul>
                     </div>
                 </li>
-                <li>
-                    <div class="btn btn-secondary">
-                        <a href="/">ADMISSION</a>
-                    </div>
-                </li>
+                {% if request.user.is_authenticated%}
+                    <li>
+                        <div class="btn btn-secondary">
+                            <a href="{% url 'Logout' %}">LOGOUT</a>
+                        </div>
+                    </li>
+                {%else%}
+                    <li>
+                        <div class="btn btn-secondary">
+                            <a href="/">ADMISSION</a>
+                        </div>
+                    </li>
+                {%endif%}   
+                
             </ul>
         </div>
     </div>

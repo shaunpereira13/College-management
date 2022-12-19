@@ -1,0 +1,20 @@
+.profile-stdent-img{
+    border-radius: 60px;
+    margin-left:35%;
+    width:150px;
+    height:150px;
+}
+
+.pull-right>p{
+    display: inline;
+}
+.datapro{
+    margin-left:5%;
+    width:80%;
+}
+.profile{
+    border:2px solid #e7ebf0;
+    margin-bottom: 25px;
+    border-top:0;
+}
+

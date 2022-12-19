@@ -12,29 +12,29 @@
             <div class="right">
                 <h5>{{type}} Login</h5>
                 <p>Don't have an account? <a href="#">Create Your Account</a> it takes less than a minute</p>
-                <form actio="">
+                <form action="" method='POST'>
+                    {% csrf_token %}
                     <div class="form-group">
-                        <label for="email">Email</label>
-                        <input type="text" class="form-control form-control-lg" id="email" placeholder="abc@xyz.com">
+                        <label for="user">Username</label>
+                        <input type="text" class="form-control form-control-lg" id="user" placeholder="abc@xyz.com" name='username'>
                     </div>
                     <br>
                     {% if type == 'Student' %}
                         <div class="form-group">
                             <label for="Rollno">Roll-No.</label>
-                            <input type="text" class="form-control form-control-lg" id="Rollno" placeholder="Rollno">
+                            <input type="text" class="form-control form-control-lg" name="Rollno" id="Rollno" placeholder="Rollno">
                         </div>
-                    {% elif type == 'Teacher' %}
+                    {% else %}
                         <div class="form-group">
                             <label for="Tr.No.">Faculity number</label>
                             <input type="text" class="form-control form-control-lg" id="Tr.No." placeholder="Faculity number">
                         </div>
-                    {% else %}
                     {% endif %}
                     <br>
                     {% if type == 'Student' %}
                     <div class="form-group">
                         <label for="PR">PR.Number</label>
-                        <input type="number" class="form-control form-control-lg" id="PR" placeholder="PR No." >
+                        <input type="number" class="form-control form-control-lg" id="PR" placeholder="PR No.">
                     </div>
                     <br>
                     {% else %}
@@ -43,7 +43,7 @@
                     
                     <div class="form-group">
                         <label for="password">Password</label>
-                        <input type="password" class="form-control form-control-lg" id="password" placeholder="Password">
+                        <input type="password" class="form-control form-control-lg" id="password" name='password' placeholder="Password">            
                     </div>
                     <br>
                     <div class="remember-me--forget-password">

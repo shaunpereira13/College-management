@@ -1,0 +1,301 @@
+{% extends 'main.html'%}
+{%load static%}
+
+{%block content %}
+<div class="row">
+    <div class="col-3">
+        <div class="card bg-light">
+            <div class="card-body box-profile">
+                <div class="profile-stdent">
+                    <img class="profile-stdent-img" src="{% static 'images/unnamed.jpg' %}" alt="User profile picture">
+                </div>
+                <h3 class="profile-username text-center">Shaun pereira</h3>
+                <ul class="list-group list-group-unbordered">
+                    <li class="list-group-item">
+                        <b>Admission No: </b> <span class="pull-right"><p>18001</p></span>
+                    </li>
+                    <li class="list-group-item">
+                        <b>Roll Number: </b> <span class="pull-right"><p>20CE57</p></span>
+                    </li>
+                    <li class="list-group-item">
+                        <b>Class: </b> <span class="pull-right"><p>TEcomp</p></span>
+                    </li>
+                    <li class="list-group-item">
+                        <b>Section: </b> <span class="pull-right"><p>B2-P4</p></span>
+                    </li>
+                </ul>
+        </div>
+        </div>
+    </div>
+    <div class="col-9">
+        <div class="card bg-light">
+            <div class="card-body">
+                <ul class="nav nav-tabs">
+                    <li class="nav-item">
+                      <a class="nav-link" href=".profile">Profile</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#exam">Exam</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href=".attendance">Attendance</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#" >Fees</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="datapro">
+                <div class="profile">
+                    <table class="table table-hover table-striped">
+                        <tbody>
+                            <tr>
+                            <td class="col-md-4">Admission Date</td>
+                            <td class="col-md-5">03/18/2021</td>
+                            </tr>
+                            <tr>
+                            <td class="col-md-4">PrNumber</td>
+                            <td class="col-md-5">235333</td>
+                            </tr>
+                            <tr>
+                            <td class="col-md-4">Date of Birth</td>
+                            <td class="col-md-5">03/18/2021</td>
+                            </tr>
+                            <tr>
+                            <td class="col-md-4">Category</td>
+                            <td class="col-md-5">General</td>
+                            </tr>
+                            <tr>
+                            <td class="col-md-4">Mobile NO</td>
+                            <td class="col-md-5">34222145124</td>
+                            </tr>
+                            <tr>
+                            <td class="col-md-4">Email</td>
+                            <td class="col-md-5">admin@admin.com</td>
+                            </tr>
+                            <tr>
+                            <td class="col-md-4">address</td>
+                            <td class="col-md-5">abc neart bcd goa</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="profile">
+                    <h3>Parent / Guardian Details</h3>
+                    <table class="table table-hover table-striped">
+                        <tbody>
+                            <tr>
+                            <td class="col-md-4">Father Name</td>
+                            <td class="col-md-5">Olivier Thomas</td>
+                            </tr>
+                            <tr>
+                            <td class="col-md-4">Father PhoneNO</td>
+                            <td class="col-md-5">24215456354</td>
+                            </tr>
+                            <tr>
+                            <td class="col-md-4">Mother Name</td>
+                            <td class="col-md-5">Caroline Thomas</td>
+                            </tr>
+                            <tr>
+                            <td class="col-md-4">Mother PhoneNO</td>
+                            <td class="col-md-5">953723564</td>
+                            </tr>
+                            <tr>
+                            <td class="col-md-4">Guardian Name</td>
+                            <td class="col-md-5">Olivier Thomas</td>
+                            </tr>
+                            <tr>
+                            <td class="col-md-4">Mobile NO</td>
+                            <td class="col-md-5">34222145124</td>
+                            </tr>
+                            <tr>
+                            <td class="col-md-4">Email</td>
+                            <td class="col-md-5">admin@admin.com</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div id="exam">
+                    <h3>Exam</h3>
+                    <h4>Internal Tests</h4>
+                    <table class="table table-hover table-striped">
+                        <tbody>
+                            <tr>
+                                <th class="col-3">Sujbect</th>
+                                <th class="col-1">IT-I</th>
+                                <th class="col-1">IT-I</th>
+                                <th class="col-1">IT-I</th>
+                                <th class='col-1'>Avg</th>
+                            </tr>
+                            <tr>
+                                <td class="col-3">Database managemnet system</td>
+                                <td class="col-1">18</td>
+                                <td class="col-1">19</td>
+                                <td class="col-1">-</td>
+                                <td class="col-1">19</td>
+                                
+                            </tr>
+                            <tr>
+                                <td class="col-3">Operating system</td>
+                                <td class="col-1">17</td>
+                                <td class="col-1">20</td>
+                                <td class="col-1">-</td>
+                                <td class="col-1">18</td>
+                            </tr>
+                            <tr>
+                                <td class="col-3">Softcomputing</td>
+                                <td class="col-1">20</td>
+                                <td class="col-1">24</td>
+                                <td class="col-1">-</td>
+                                <td class="col-1">23</td>
+                            </tr>
+                            <tr>
+                                <td class="col-3">OOjava</td>
+                                <td class="col-1">18</td>
+                                <td class="col-1">22</td>
+                                <td class="col-1">-</td>
+                                <td class="col-1">20</td>
+                            </tr>
+                            <tr>
+                                <td class="col-3">Webtech</td>
+                                <td class="col-1">20</td>
+                                <td class="col-1">25</td>
+                                <td class="col-1">-</td>
+                                <td class="col-1">23</td>
+                            </tr>
+                            <tr>
+                                <td class="col-3">Cyber security</td>
+                                <td class="col-1">15</td>
+                                <td class="col-1">18</td>
+                                <td class="col-1">-</td>
+                                <td class="col-1">16</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <br>
+                    <h4>Semister End</h4>
+                    <table class="table table-hover table-striped">
+                        <tbody>
+                            <tr>
+                                <th class="col-3">Sujbect</th>
+                                <th class="col-1">Max Marks</th>
+                                <th class="col-1">Marks Obtained</th>
+                                <th class="col-1">Percentage</th>
+                            </tr>
+                            <tr>
+                                <td class="col-3">Database managemnet system</td>
+                                <td class="col-1">100</td>
+                                <td class="col-1">80</td>
+                                <td class="col-1">80%</td>
+                                
+                            </tr>
+                            <tr>
+                                <td class="col-3">Operating system</td>
+                                <td class="col-1">100</td>
+                                <td class="col-1">83</td>
+                                <td class="col-1">83%</td>
+                            
+                            </tr>
+                            <tr>
+                                <td class="col-3">Softcomputing</td>
+                                <td class="col-1">100</td>
+                                <td class="col-1">24</td>
+                                <td class="col-1">24%</td>
+                            
+                            </tr>
+                            <tr>
+                                <td class="col-3">OOjava</td>
+                                <td class="col-1">100</td>
+                                <td class="col-1">60</td>
+                                <td class="col-1">60%</td>
+                            
+                            </tr>
+                            <tr>
+                                <td class="col-3">Webtech</td>
+                                <td class="col-1">100</td>
+                                <td class="col-1">70</td>
+                                <td class="col-1">70%</td>
+                                
+                            </tr>
+                            <tr>
+                                <td class="col-3">Cyber security</td>
+                                <td class="col-1">100</td>
+                                <td class="col-1">65</td>
+                                <td class="col-1">65%</td>
+                            
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <br>
+                <div class="attendance">
+                    <h2>Attendance</h2>
+                    <table class="table table-hover table-striped">
+                        <tbody>
+                            <tr>
+                                <th class="col-3">Sujbect</th>
+                                <th class="col-1">Aug</th>
+                                <th class="col-1">Sept</th>
+                                <th class="col-1">Oct</th>
+                                <th class='col-1'>Nov</th>
+                                <th class='col-1'>Dec</th>
+                            </tr>
+                            <tr>
+                                <td class="col-3">Database managemnet system</td>
+                                <td class="col-1">18</td>
+                                <td class="col-1">19</td>
+                                <td class="col-1">-</td>
+                                <td class="col-1">19</td>
+                                <td class="col-1">19</td>
+                                
+                            </tr>
+                            <tr>
+                                <td class="col-3">Operating system</td>
+                                <td class="col-1">17</td>
+                                <td class="col-1">20</td>
+                                <td class="col-1">-</td>
+                                <td class="col-1">18</td>
+                                <td class="col-1">18</td>
+                            </tr>
+                            <tr>
+                                <td class="col-3">Softcomputing</td>
+                                <td class="col-1">20</td>
+                                <td class="col-1">24</td>
+                                <td class="col-1">-</td>
+                                <td class="col-1">23</td>
+                                <td class="col-1">23</td>
+                            </tr>
+                            <tr>
+                                <td class="col-3">OOjava</td>
+                                <td class="col-1">18</td>
+                                <td class="col-1">22</td>
+                                <td class="col-1">-</td>
+                                <td class="col-1">20</td>
+                                <td class="col-1">20</td>
+                            </tr>
+                            <tr>
+                                <td class="col-3">Webtech</td>
+                                <td class="col-1">20</td>
+                                <td class="col-1">25</td>
+                                <td class="col-1">-</td>
+                                <td class="col-1">23</td>
+                                <td class="col-1">23</td>
+                            </tr>
+                            <tr>
+                                <td class="col-3">Cyber security</td>
+                                <td class="col-1">15</td>
+                                <td class="col-1">18</td>
+                                <td class="col-1">-</td>
+                                <td class="col-1">16</td>
+                                <td class="col-1">16</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+{%endblock content%}
+

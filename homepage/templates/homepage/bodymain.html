@@ -19,26 +19,27 @@
             <br><br>
             <div class="col-5 text-side form-right">
                 <h3>Get in Touch</h3>
-                <form actio="">
+                <form method="POST" action="{% url 'home' %}">
+                    {% csrf_token %}
                     <div class="form-group">
-                        <input type="text" class="form-control form-control-lg" id="name" placeholder="Name">
+                        <input type="text" class="form-control form-control-lg" name="name" placeholder="Name">
                     </div>
                     <br>
                     <div class="form-group">
-                        <input type="email" class="form-control form-control-lg" id="email" placeholder="Email">
+                        <input type="email" class="form-control form-control-lg" name="email" placeholder="Email">
                     </div>
                     <br>
                     <div class="form-group">
-                        <input type="number" class="form-control form-control-lg" id="mobile" placeholder="Phone-Number">
+                        <input type="number" class="form-control form-control-lg" name="phone" placeholder="Phone-Number">
                     </div>
 
                     <br>
                     <div class="form-group">
-                        <input type="text" class="form-control form-control-lg" id="qu" placeholder="Queries">
+                        <input type="text" class="form-control form-control-lg" name="queries" placeholder="Queries">
                     </div>
                     <br>
                     <div class="form-group abcd">
-                        <input type="submit" class="form-control" id="email" placeholder="Login">
+                        <button type="submit" class="form-control"> SEND </button> 
                     </div>
                 </form>
             </div>
