@@ -31,7 +31,7 @@ def loginstudent(request,pk):
 
         if user is not None:
             login(request,user)
-            return redirect('/studentdet/',args=(roll_no))
+            return redirect(f"/studentdet/{roll_no}/")
             
         else:
             messages.error(request, 'username or password wrong.')

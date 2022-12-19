@@ -3,12 +3,18 @@ from django.http import HttpResponse
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth import logout
 from .models import *
-from homepage import views 
+from django.contrib import messages
+
+data = {}
 
 
 @login_required(login_url='login/')
 def studentdetails(request,roll_no):
-    return render(request,'student/studentdetails.html')
+    if not StudentModel.objects.filter(roll_no=roll_no).exists():
+        messages.error(request, 'roll number does not exists.')
+        return redirect("/home")
+    data["student_info"] = StudentModel.objects.get(roll_no=roll_no)
+    return render(request,'student/studentdetails.html', context=data)
 
 
 @login_required(login_url='loginteach/')
