@@ -6,21 +6,18 @@
         <div class="card bg-light">
             <div class="card-body box-profile">
                 <div class="profile-stdent">
-                    <img class="profile-stdent-img" src="{% static 'images/unnamed.jpg' %}" alt="User profile picture">
+                    <img class="profile-stdent-img" src="{% static 'images/user-default.png' %}" alt="User profile picture">
                 </div>
-                <h3 class="profile-username text-center">Shaun pereira</h3>
+                <h3 class="profile-username text-center">{{info.name}}</h3>
                 <ul class="list-group list-group-unbordered">
                     <li class="list-group-item">
-                        <b>Admission No: </b> <span class="pull-right"><p>18001</p></span>
+                        <b>Teacher No: </b> <span class="pull-right"><p>{{info.trno}}</p></span>
                     </li>
                     <li class="list-group-item">
-                        <b>Roll Number: </b> <span class="pull-right"><p>20CE57</p></span>
+                        <b>Department: </b> <span class="pull-right"><p>{{info.dept}}</p></span>
                     </li>
                     <li class="list-group-item">
-                        <b>Class: </b> <span class="pull-right"><p>TEcomp</p></span>
-                    </li>
-                    <li class="list-group-item">
-                        <b>Section: </b> <span class="pull-right"><p>B2-P4</p></span>
+                        <b>Post: </b> <span class="pull-right"><p>{{info.post}}</p></span>
                     </li>
                 </ul>
             </div>
@@ -56,27 +53,27 @@
                                     </tr>
                                     <tr>
                                         <td class="col-md-4">trNumber</td>
-                                        <td class="col-md-5">235333</td>
+                                        <td class="col-md-5">{{info.trno}}</td>
                                     </tr>
                                     <tr>
                                         <td class="col-md-4">Department</td>
-                                        <td class="col-md-5">Computer</td>
+                                        <td class="col-md-5">{{info.dept}}</td>
                                     </tr>
                                     <tr>
                                         <td class="col-md-4">education</td>
-                                        <td class="col-md-5">M.Tech</td>
+                                        <td class="col-md-5">{{info.edu}}</td>
                                     </tr>
                                     <tr>
                                         <td class="col-md-4">Mobile NO</td>
-                                            <td class="col-md-5">34222145124</td>
+                                            <td class="col-md-5">{{info.mobno}}</td>
                                     </tr>
                                     <tr>
                                         <td class="col-md-4">Email</td>
-                                        <td class="col-md-5">admin@admin.com</td>
+                                        <td class="col-md-5">{{info.email}}</td>
                                     </tr>
                                     <tr>
                                         <td class="col-md-4">address</td>
-                                        <td class="col-md-5">abc neart bcd goa</td>
+                                        <td class="col-md-5">{{info.email}}</td>
                                     </tr>
                                 </tbody>
                             </table>
@@ -90,21 +87,13 @@
                                         <td class="col-md-4">No.of.Students</td>
                                         <td class="col-md-4">Average score</td>
                                     </tr>
-                                    <tr>
-                                        <td class="col-md-4">Database Management system</td>
-                                        <td class="col-md-4">90</td>
-                                        <td class="col-md-4">80</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="col-md-4">Database Management system lab</td>
-                                        <td class="col-md-4">45</td>
-                                        <td class="col-md-4">90</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="col-md-4">operating system</td>
-                                        <td class="col-md-4">90</td>
-                                        <td class="col-md-4">85</td>
-                                    </tr>
+                                    {% for i in subjects %}
+                                        <tr>
+                                            <td class="col-md-4">{{i.subject}}</td>
+                                            <td class="col-md-4">90</td>
+                                            <td class="col-md-4">80</td>
+                                        </tr>
+                                   {%  endfor %}
                                 </tbody>
                             </table>
                         </div>
@@ -113,20 +102,12 @@
                             <h3>Enter Marks</h3>
                             <table class="table table-hover table-striped">
                                 <tbody>
+                                {% for i in subjects %}
                                     <tr>
-                                        <td class="col-md-4">Database Management system</td>
-                                        <td class="col-md-7"><a href="{% url 'marks' %}"><button type="button" class="btn btn-primary">Enter</button></a></td>
+                                        <td class="col-md-4">{{i.subject}}</td>
+                                        <td class="col-md-7"><a href="/marks/{{i.subject_id}}/"><button type="button" class="btn btn-primary">Enter</button></a></td>
                                     </tr>
-                                    </tr>
-                                    <tr>
-                                        <td class="col-md-4">Database Management system lab</td>
-                                        <td class="col-md-7"><a href=""><button type="button" class="btn btn-primary">Enter</button></a></td>
-                                    </tr>
-                                    <tr>
-                                        <td class="col-md-4">operating system</td>
-                                        <td class="col-md-7"><a href=""><button type="button" class="btn btn-primary">Enter</button></a></td>
-                                    </tr>
-                                    </tr>
+                                {% endfor %}
                                 </tbody>
                             </table>
                         </div>

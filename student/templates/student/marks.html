@@ -7,62 +7,42 @@
     <div class="col-8">
         <div class="card bg-light">
             <div class="card-body">
-                <h2>Dbms Marks</h2>
+                {% for j in marks|slice:":1"%}
+                    <h2>{{j.subject}} Marks</h2>
+                {% endfor %}
             </div>
 
-
-            <form action="" method="POST">
-                {% csrf_token %}
+            
                 <table class="table table-hover table-striped">
                     <tbody>
                         <tr>
-                            <th class="col-2">Name</th>
-                            <th class='col-2'>Remove<th>
-                            <th class="col-2">IT-I</th>
-                            <th class="col-2">IT-II</th>
-                            <th class="col-2">IT-III</th>
-                            <th class='col-2'>Avg</th>
+                            <td class="col-1">Name</td>
+                            <td class="col-1">Remove</td>
+                            <td class='col-1'>update</td>
+                            <td class="col-1">IT-I</td>
+                            <td class="col-1">IT-II</td>
+                            <td class="col-1">IT-III</td>
+                            <td class="col-1">Semend</td>
+                            <td class='col-1'>Avg</td>
                         </tr>
-                        <tr>
-                            <td class="col-2">shaun</td>
-                            <td class='col-2'><a href=""><button type="button" class="btn btn-danger">Delete</button></a></td>
-                            <td class="col-2"><input type="number" max="25" value=19></td>
-                            <td class="col-2"><input type="number" max="25" value=19></td>
-                            <td class="col-2"><input type="number" max="25" value=19 ></td>
-                            <td class="col-2">19</td>
-                            
-                        </tr>
-                        <tr>
-                            <td class="col-2">varun</td>
-                            <td class='col-2'><a href=""><button type="button" class="btn btn-danger">Delete</button></a></td>
-                            <td class="col-2"><input type="number" max="25" value=19></td>
-                            <td class="col-2"><input type="number" max="25" value=19></td>
-                            <td class="col-2"><input type="number" max="25" value=19 ></td>
-                            <td class="col-2">19</td>
-                            
-                        </tr>
-                        <tr>
-                            <td class="col-2">popnil</td>
-                            <td class='col-2'><a href=""><button type="button" class="btn btn-danger">Delete</button></a></td>
-                            <td class="col-2"><input type="number" max="25" value=19></td>
-                            <td class="col-2"><input type="number" max="25" value=19></td>
-                            <td class="col-2"><input type="number" max="25" value=19 ></td>
-                            <td class="col-2">19</td>
-                            
-                        </tr>
-                        <tr>
-                            <td class="col-2">shaina</td>
-                            <td class='col-2'><a href=""><button type="button" class="btn btn-danger">Delete</button></a></td>
-                            <td class="col-2"><input type="number" max="25" value=19></td>
-                            <td class="col-2"><input type="number" max="25" value=19></td>
-                            <td class="col-2"><input type="number" max="25" value=19 ></td>
-                            <td class="col-2">19</td>
-                            
-                        </tr>
+                            {% for j in marks %}
+                                <tr>
+                                    <td class="col-1">{{j.student}}</td>
+                                    <td class='col-1'><a href="/delmarks/{{j.student_id}}/"><button type="button" class="btn btn-danger">Delete</button></a></td>
+                                    <td class='col-1'><a href="/updatemarks/{{j.id}}/"><button type="button" class="btn btn-danger">Update</button></a></td>
+                                    <td class="col-1">{{j.It1}}</td>
+                                    <td class="col-1">{{j.It2}}</td>
+                                    <td class="col-1">{{j.It3}} </td>
+                                    <td class="col-1">{{j.semend}} </td>
+                                    <td class="col-1">19</td>
+                                    
+                                </tr>
+                            {%endfor%}
                     </tbody>
                 </table>
-                <input type="submit">
-            </form>
+                
+            <br><br>
+            <a href="/teacherdet/123/"><button type="button" class="btn btn-dark">Back</button></a>
             <br>
         </div>
     </div>
@@ -70,3 +50,6 @@
 
 
 {% endblock content %}
+
+
+

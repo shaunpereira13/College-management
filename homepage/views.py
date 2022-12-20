@@ -44,6 +44,7 @@ def loginteacher(request):
     if request.method=="POST":
         username=request.POST['username']
         password=request.POST['password']
+        trno=request.POST['Tr_no']
         try:
             user=User.objects.get(username=username)
         except:
@@ -53,7 +54,7 @@ def loginteacher(request):
 
         if user is not None:
             login(request,user)
-            return redirect('teacherdetails')
+            return redirect(f'/teacherdet/{trno}/')
         else:
             messages.error(request, 'username or password wrong.')
 

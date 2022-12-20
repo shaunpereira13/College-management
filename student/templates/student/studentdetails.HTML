@@ -7,18 +7,18 @@
         <div class="card bg-light">
             <div class="card-body box-profile">
                 <div class="profile-stdent">
-                    <img class="profile-stdent-img" src="{% static 'images/unnamed.jpg' %}" alt="User profile picture">
+                    <img class="profile-stdent-img" src="{% static 'images/user-default.png' %}" alt="User profile picture">
                 </div>
-                <h3 class="profile-username text-center">Shaun pereira</h3>
+                <h3 class="profile-username text-center">{{info.name}}</h3>
                 <ul class="list-group list-group-unbordered">
                     <li class="list-group-item">
-                        <b>Admission No: </b> <span class="pull-right"><p>18001</p></span>
+                        <b>Admission No: </b> <span class="pull-right"><p>{{info.pr_no}}</p></span>
                     </li>
                     <li class="list-group-item">
-                        <b>Roll Number: </b> <span class="pull-right"><p>20CE57</p></span>
+                        <b>Roll Number: </b> <span class="pull-right"><p>{{roll_no}}</p></span>
                     </li>
                     <li class="list-group-item">
-                        <b>Class: </b> <span class="pull-right"><p>TEcomp</p></span>
+                        <b>Class: </b> <span class="pull-right"><p>{{info.classs}}</p></span>
                     </li>
                     <li class="list-group-item">
                         <b>Section: </b> <span class="pull-right"><p>B2-P4</p></span>
@@ -51,31 +51,31 @@
                         <tbody>
                             <tr>
                             <td class="col-md-4">Admission Date</td>
-                            <td class="col-md-5">03/18/2021</td>
+                            <td class="col-md-5">{{info.admissiondate}}</td>
                             </tr>
                             <tr>
                             <td class="col-md-4">PrNumber</td>
-                            <td class="col-md-5">235333</td>
+                            <td class="col-md-5">{{info.pr_no}}</td>
                             </tr>
                             <tr>
                             <td class="col-md-4">Date of Birth</td>
-                            <td class="col-md-5">03/18/2021</td>
+                            <td class="col-md-5">{{info.dob}}</td>
                             </tr>
                             <tr>
                             <td class="col-md-4">Category</td>
-                            <td class="col-md-5">General</td>
+                            <td class="col-md-5">{{info.cat}}</td>
                             </tr>
                             <tr>
                             <td class="col-md-4">Mobile NO</td>
-                            <td class="col-md-5">34222145124</td>
+                            <td class="col-md-5">{{info.mobno}}</td>
                             </tr>
                             <tr>
                             <td class="col-md-4">Email</td>
-                            <td class="col-md-5">admin@admin.com</td>
+                            <td class="col-md-5">{{info.email}}</td>
                             </tr>
                             <tr>
                             <td class="col-md-4">address</td>
-                            <td class="col-md-5">abc neart bcd goa</td>
+                            <td class="col-md-5">{{info.address}}</td>
                             </tr>
                         </tbody>
                     </table>
@@ -86,31 +86,23 @@
                         <tbody>
                             <tr>
                             <td class="col-md-4">Father Name</td>
-                            <td class="col-md-5">Olivier Thomas</td>
+                            <td class="col-md-5">{{info.fathername}}</td>
                             </tr>
                             <tr>
                             <td class="col-md-4">Father PhoneNO</td>
-                            <td class="col-md-5">24215456354</td>
+                            <td class="col-md-5">{{info.mobno_father}}</td>
                             </tr>
                             <tr>
                             <td class="col-md-4">Mother Name</td>
-                            <td class="col-md-5">Caroline Thomas</td>
+                            <td class="col-md-5">{{info.mothername}}</td>
                             </tr>
                             <tr>
                             <td class="col-md-4">Mother PhoneNO</td>
-                            <td class="col-md-5">953723564</td>
-                            </tr>
-                            <tr>
-                            <td class="col-md-4">Guardian Name</td>
-                            <td class="col-md-5">Olivier Thomas</td>
-                            </tr>
-                            <tr>
-                            <td class="col-md-4">Mobile NO</td>
-                            <td class="col-md-5">34222145124</td>
+                            <td class="col-md-5">{{info.mobno_mother}}</td>
                             </tr>
                             <tr>
                             <td class="col-md-4">Email</td>
-                            <td class="col-md-5">admin@admin.com</td>
+                            <td class="col-md-5">{{info.parentsEmail}}</td>
                             </tr>
                         </tbody>
                     </table>
@@ -125,51 +117,17 @@
                                 <th class="col-1">IT-I</th>
                                 <th class="col-1">IT-I</th>
                                 <th class="col-1">IT-I</th>
-                                <th class='col-1'>Avg</th>
+                           
                             </tr>
+                            {% for i in marks %}
                             <tr>
-                                <td class="col-3">Database managemnet system</td>
-                                <td class="col-1">18</td>
-                                <td class="col-1">19</td>
-                                <td class="col-1">-</td>
-                                <td class="col-1">19</td>
-                                
+                                <th class="col-3">{{i.subject}}</th>
+                                <th class="col-1">{{i.It1}}</th>
+                                <th class="col-1">{{i.It2}}</th>
+                                <th class="col-1">{{i.It3}}</th>
+                               
                             </tr>
-                            <tr>
-                                <td class="col-3">Operating system</td>
-                                <td class="col-1">17</td>
-                                <td class="col-1">20</td>
-                                <td class="col-1">-</td>
-                                <td class="col-1">18</td>
-                            </tr>
-                            <tr>
-                                <td class="col-3">Softcomputing</td>
-                                <td class="col-1">20</td>
-                                <td class="col-1">24</td>
-                                <td class="col-1">-</td>
-                                <td class="col-1">23</td>
-                            </tr>
-                            <tr>
-                                <td class="col-3">OOjava</td>
-                                <td class="col-1">18</td>
-                                <td class="col-1">22</td>
-                                <td class="col-1">-</td>
-                                <td class="col-1">20</td>
-                            </tr>
-                            <tr>
-                                <td class="col-3">Webtech</td>
-                                <td class="col-1">20</td>
-                                <td class="col-1">25</td>
-                                <td class="col-1">-</td>
-                                <td class="col-1">23</td>
-                            </tr>
-                            <tr>
-                                <td class="col-3">Cyber security</td>
-                                <td class="col-1">15</td>
-                                <td class="col-1">18</td>
-                                <td class="col-1">-</td>
-                                <td class="col-1">16</td>
-                            </tr>
+                            {% endfor %}
                         </tbody>
                     </table>
                     <br>
@@ -182,48 +140,14 @@
                                 <th class="col-1">Marks Obtained</th>
                                 <th class="col-1">Percentage</th>
                             </tr>
+                            {% for i in marks %}
                             <tr>
-                                <td class="col-3">Database managemnet system</td>
+                                <td class="col-3">{{i.subject}}</td>
                                 <td class="col-1">100</td>
-                                <td class="col-1">80</td>
-                                <td class="col-1">80%</td>
-                                
+                                <td class="col-1">{{i.semend}}</td>
+                                <td class="col-1">{{i.semend}}%</td>
                             </tr>
-                            <tr>
-                                <td class="col-3">Operating system</td>
-                                <td class="col-1">100</td>
-                                <td class="col-1">83</td>
-                                <td class="col-1">83%</td>
-                            
-                            </tr>
-                            <tr>
-                                <td class="col-3">Softcomputing</td>
-                                <td class="col-1">100</td>
-                                <td class="col-1">24</td>
-                                <td class="col-1">24%</td>
-                            
-                            </tr>
-                            <tr>
-                                <td class="col-3">OOjava</td>
-                                <td class="col-1">100</td>
-                                <td class="col-1">60</td>
-                                <td class="col-1">60%</td>
-                            
-                            </tr>
-                            <tr>
-                                <td class="col-3">Webtech</td>
-                                <td class="col-1">100</td>
-                                <td class="col-1">70</td>
-                                <td class="col-1">70%</td>
-                                
-                            </tr>
-                            <tr>
-                                <td class="col-3">Cyber security</td>
-                                <td class="col-1">100</td>
-                                <td class="col-1">65</td>
-                                <td class="col-1">65%</td>
-                            
-                            </tr>
+                            {% endfor %}
                         </tbody>
                     </table>
                 </div>
